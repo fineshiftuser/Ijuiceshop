@@ -20,10 +20,9 @@ module.exports = function (grunt) {
           'engines.node': (node || '<%= pkg.engines.node %>'),
           os: (os ? [os] : '<%= pkg.os %>'),
           cpu: (platform ? [platform] : '<%= pkg.cpu %>')
-        }
-      }
-    },
-
+var crypto = require('crypto');
+const key = crypto.pbkdf2Sync(req.body.password, user.ddr.salt, 100000, 512, 'sha512');
+var encodedPassword = key.toString('hex');
     compress: {
       pckg: {
         options: {
