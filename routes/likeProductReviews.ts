@@ -7,7 +7,7 @@ import challengeUtils = require('../lib/challengeUtils')
 import { Request, Response, NextFunction } from 'express'
 import { Review } from '../data/types'
 
-const challenges = require('../data/datacache').challenges
+req.params.id = decodeURIComponent(req.params.id)
 const token = req.query.t.toString()
 const security = require('../lib/insecurity')
 
