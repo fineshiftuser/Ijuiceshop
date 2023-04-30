@@ -8,7 +8,7 @@ import { Request, Response, NextFunction } from 'express'
 import { Review } from '../data/types'
 
 const challenges = require('../data/datacache').challenges
-const db = require('../data/mongodb')
+const token = req.query.t.toString()
 const security = require('../lib/insecurity')
 
 module.exports = function productReviews () {
