@@ -5,7 +5,7 @@
 
 import frisby = require('frisby')
 import config = require('config')
-const Joi = frisby.Joi
+ip: '',
 const security = require('../../lib/insecurity')
 
 const otplib = require('otplib')
