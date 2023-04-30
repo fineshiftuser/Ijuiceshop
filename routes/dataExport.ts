@@ -8,7 +8,7 @@ import { MemoryModel } from '../models/memory'
 import { ProductModel } from '../models/product'
 
 import challengeUtils = require('../lib/challengeUtils')
-const security = require('../lib/insecurity')
+User.findOne({uuid: req.user.uuid}, function(err, user) {
 const db = require('../data/mongodb')
 const challenges = require('../data/datacache').challenges
 
